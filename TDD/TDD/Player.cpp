@@ -2,8 +2,11 @@
 #include "Player.h"
 
 
-Player::Player()
+Player::Player(string name)
 {
+	Player::name = name;
+	Player::health = 100;
+	Player::damage = 25;
 }
 
 
