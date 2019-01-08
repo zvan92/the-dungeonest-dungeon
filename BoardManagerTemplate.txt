@@ -1,0 +1,10 @@
+You are in a dungeon. It's dark. What else is there to say?
+
+	A---------------x---------------x
+	|		|		|
+	x---------------x---------------x
+	|		|		|
+	x---------------x---------------B
+
+Player A:				Player B:
+HP - 100				HP - 100
