@@ -6,19 +6,20 @@ using namespace std;
 class Player
 {
 public:
-	Player(string name); //constructor, allows user to pass in a name
+	Player(string name, int position); //constructor, allows user to pass in a name and grid position
 
-	void getHealth();
-	void getDamage();
+	int getHealth();
+	int getDamage();
+	int getPosition();
 	void setHealth(int value);
 	void setDamage(int value);
-	void MovePosition();
 	void Attack();
 	void EndTurn();
 private:
 	string name;
 	int health;
 	int damage;
+	int position; //will be 1-9, based on numpad
 
 	~Player();
 };
