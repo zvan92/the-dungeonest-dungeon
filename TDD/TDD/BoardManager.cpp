@@ -10,15 +10,15 @@ BoardManager::BoardManager()
 		{4, 5, 6},
 		{1, 2, 3}
 	};
-	int pNW = 0;
-	int pN = 0;
-	int pNE = 0;
-	int pW = 0;
-	int pC = 0;
-	int pE = 0;
-	int pSW = 0;
-	int pS = 0;
-	int pSE = 0;
+	char pNW = 'x';
+	char pN = 'x';
+	char pNE = 'x';
+	char pW = 'x';
+	char pC = 'x';
+	char pE = 'x';
+	char pSW = 'x';
+	char pS = 'x';
+	char pSE = 'x';
 
 	// Prints mapping out to screen
 	cout << "You are in a dungeon. It's dark. What else is there to say? \n \n";
@@ -30,7 +30,11 @@ BoardManager::BoardManager()
 	cout << "\t|		|		|\n";
 	cout << "\t|		|		|\n";
 	cout << "\t|		|		|\n";
-	cout << "\t" << pSW << "---------------" << pS << "---------------" << pSE << "\n";
+	cout << "\t" << pSW << "---------------" << pS << "---------------" << pSE << "\n\n";
+	cout << "Player A				Player B\n";
+	cout << "HP:					HP: \n\n";
+	cout << "What would you like to do?\n";
+
 	// If playerPosition = 7 && playerA then pNW = A
 }
 

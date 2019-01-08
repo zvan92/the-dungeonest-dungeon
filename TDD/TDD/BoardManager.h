@@ -7,15 +7,15 @@ class BoardManager
 {
 public:
 	int gridPos[3][3];
-	int pNW;
-	int pN;
-	int pNE;
-	int pW;
-	int pC;
-	int pE;
-	int pSW;
-	int pS;
-	int pSE;
+	char pNW;
+	char pN;
+	char pNE;
+	char pW;
+	char pC;
+	char pE;
+	char pSW;
+	char pS;
+	char pSE;
 
 	BoardManager();
 	~BoardManager();
