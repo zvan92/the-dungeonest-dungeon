@@ -2,15 +2,28 @@
 #include "Player.h"
 
 
-Player::Player(string name, int position)
+Player::Player()
 {
-	Player::name = name;
-	Player::health = 100;
-	Player::damage = 25;
-	Player::position = position;
 }
 
 
 Player::~Player()
 {
+}
+
+void Player::Attack()
+{
+	// attack if a player is nearby
+}
+
+
+void Player::Move()
+{
+	// move position based on a passed in direction value
+}
+
+
+void Player::EndTurn()
+{
+	// end turn
 }
