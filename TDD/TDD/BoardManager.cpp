@@ -1,7 +1,9 @@
 #include "pch.h"
+#include <iostream>
 #include "BoardManager.h"
-#include "Player.h"
+#include "Init.h"
 
+using namespace std;
 
 BoardManager::BoardManager()
 {

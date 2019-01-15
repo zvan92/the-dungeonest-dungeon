@@ -1,11 +1,13 @@
 #include "pch.h"
+#include <iostream>
 #include "Init.h"
+#include "BoardManager.h"
 
 Init::Init()
 {
 	SetupPlayers();
-	myBoard.StartPlayerPositions();
-	myBoard.DisplayBoard();
+	BoardManager::getInstance()->StartPlayerPositions();
+	BoardManager::getInstance()->DisplayBoard();
 }
 
 
@@ -22,8 +24,8 @@ void Init::SetupPlayers()
 		cout << "Enter player " << i+1 << " name: ";
 		cin >> name;
 		cout << endl;
-		myBoard.players[i].setName(name);
-		myBoard.players[i].setHealth(100);
+		BoardManager::getInstance()->players[i].setName(name);
+		BoardManager::getInstance()->players[i].setHealth(100);
 		system("CLS");
 	}
 }

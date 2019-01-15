@@ -1,6 +1,4 @@
 #pragma once
-#include <iostream>
-#include "Init.h"
 #include "Player.h"
 
 using namespace std;
