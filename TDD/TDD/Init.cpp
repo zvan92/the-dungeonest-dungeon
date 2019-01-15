@@ -27,6 +27,7 @@ void Init::SetupPlayers()
 		cin >> name;
 		cout << endl;
 		myBoard.players[i].setName(name);
+		myBoard.players[i].setHealth(100);
 		system("CLS");
 	}
 }
