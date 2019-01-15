@@ -16,6 +16,7 @@ public:
 	int playerBPos;
 	char playerPos[9] = { 'x','x','x','x','x','x','x','x','x' };
 	char moveDir;
+	char playerAction;
 	Player players[2];
 
 	int GetPlayerPositions(char player);
