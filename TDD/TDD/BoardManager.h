@@ -8,7 +8,14 @@ using namespace std;
 class BoardManager
 {
 public:
-	BoardManager();
+	static BoardManager *getInstance()
+	{
+		if (!instance)
+		{
+			instance = new BoardManager();
+			return instance;
+		}
+	}
 	~BoardManager();
 
 	// Grid position following cardinal directions as per Numpad
@@ -26,4 +33,9 @@ public:
 	void DisplayBoard();
 
 	char PlayerAction();
+private:
+	BoardManager();
+	static BoardManager *instance;
+	
 };
+BoardManager *BoardManager::instance = 0;

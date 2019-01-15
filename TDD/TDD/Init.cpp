@@ -1,9 +1,5 @@
 #include "pch.h"
 #include "Init.h"
-#include "Player.h"
-#include "BoardManager.h"
-
-BoardManager myBoard;
 
 Init::Init()
 {

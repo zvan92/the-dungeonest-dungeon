@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "Player.h"
+#include "GameManager.h"
 
 
 Player::Player()
@@ -19,6 +20,7 @@ void Player::Attack()
 
 void Player::Move()
 {
+	GameManager::getInstance()->StartPlayerTurn();
 	// move position based on a passed in direction value
 }
 
