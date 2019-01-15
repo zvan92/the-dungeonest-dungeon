@@ -17,6 +17,8 @@ public:
 	char pS;
 	char pSE;
 
+	int GetPlayerPositions(char player);
+
 	BoardManager();
 	~BoardManager();
 };

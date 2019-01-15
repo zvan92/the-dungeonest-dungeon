@@ -36,3 +36,22 @@ BoardManager::BoardManager()
 BoardManager::~BoardManager()
 {
 }
+
+
+int BoardManager::GetPlayerPositions(char player) //pass in 'a' or 'b' depending on which player you're checking
+{
+	for (int i = 0; i < 9; i++)
+	{
+		int temp;
+
+		if (playerPos[i] != 'x') //if a location variable has an 'A' or 'B' value
+		{
+			if (playerPos[i] == player)
+			{
+				temp = i; //stores a value of 1-9 to show position
+			}
+		}
+
+		return temp;
+	}
+}
