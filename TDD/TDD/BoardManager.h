@@ -6,6 +6,9 @@ using namespace std;
 class BoardManager
 {
 public:
+	BoardManager();
+	~BoardManager();
+
 	// Grid position following cardinal directions as per Numpad
 	int playerAPos;
 	int playerBPos;
@@ -17,6 +20,4 @@ public:
 	void StartPlayerPositions();
 
 	void DisplayBoard();
-	BoardManager();
-	~BoardManager();
 };
