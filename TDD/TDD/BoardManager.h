@@ -24,4 +24,6 @@ public:
 	void StartPlayerPositions();
 
 	void DisplayBoard();
+
+	char PlayerAction();
 };

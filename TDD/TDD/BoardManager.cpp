@@ -37,22 +37,37 @@ void BoardManager::DisplayBoard()
 	cout << "\tHP: " << players[0].getHealth() << "\t\t\tHP: " << players[1].getHealth() << endl;
 	cout << endl;
 	cout << "What would you like to do?\n\n";
+	do
+	{
+		PlayerAction();
+	} while (PlayerAction() == NULL);
+}
+
+char BoardManager::PlayerAction()
+{
 	cout << "(A)ttack \n(M)ove \n(E)nd Turn \n\nYour choice: ";
-	ACTION:
 	cin >> playerAction;
+	/*do	{
+		cout << "playerAction: " << playerAction << endl;
+		cout << "Invalid input. Please enter 'a' for attack, 'm' for move or 'e' for end turn." << endl;
+		cout << "(A)ttack \n(M)ove \n(E)nd Turn \n\nYour choice: ";
+		playerAction = NULL;
+		cout << "playerAction: " << playerAction << endl;
+		cin >> playerAction;
+	} while (playerAction != 'a' || playerAction != 'm' || playerAction != 'e');*/
 	if (playerAction == 'a')
 		players[0].Attack();
 	else if (playerAction == 'm')
 		players[0].Move();
 	else if (playerAction == 'e')
 		players[0].EndTurn();
-	else
+	else if (playerAction != 'a' || playerAction != 'm' || playerAction != 'e')
 	{
 		cout << "Invalid input. Please enter 'a' for attack, 'm' for move or 'e' for end turn." << endl;
-		cout << "What would you like to do?\n\n";
-		cout << "(A)ttack \n(M)ove \n(E)nd Turn \n\nYour choice: ";
-		goto ACTION;
+		return NULL;
 	}
+	
+	return playerAction;
 }
 
 int BoardManager::GetPlayerPositions(char player) //pass in 'a' or 'b' depending on which player you're checking
