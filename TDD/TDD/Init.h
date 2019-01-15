@@ -1,4 +1,6 @@
 #pragma once
+#include "BoardManager.h"
+
 class Init
 {
 public:

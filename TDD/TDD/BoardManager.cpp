@@ -6,8 +6,6 @@ BoardManager::BoardManager()
 {
 	playerAPos = GetPlayerPositions('A');
 	playerBPos = GetPlayerPositions('B');
-	
-
 }
 
 
@@ -34,7 +32,7 @@ void BoardManager::DisplayBoard()
 	cout << "\t|		|		|\n";
 	cout << "\t|		|		|\n";
 	cout << "\t" << playerPos[6] << "---------------" << playerPos[7] << "---------------" << playerPos[8] << "\n\n";
-	cout << "Player A				Player B\n";
+	cout << "Player A: " << players[0].getName() << "	Player B\n";
 	cout << "HP:					HP: \n\n";
 	cout << "What would you like to do?\n\n";
 	cout << "Move ";
