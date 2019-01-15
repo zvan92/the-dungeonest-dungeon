@@ -12,6 +12,8 @@ public:
 		{4, 5, 6},
 		{1, 2, 3}
 	};
+	int playerAPos;
+	int playerBPos;
 	char playerPos[9] = { 'x','x','x','x','x','x','x','x','x' };
 	char moveDir;
 

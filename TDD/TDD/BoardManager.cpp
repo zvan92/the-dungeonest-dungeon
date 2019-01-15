@@ -4,6 +4,12 @@
 
 BoardManager::BoardManager()
 {
+	playerPos[0] = 'A';
+	playerPos[8] = 'B';
+
+	playerAPos = GetPlayerPositions('A');
+	playerBPos = GetPlayerPositions('B');
+	
 	// Prints mapping out to screen
 	cout << "You are in a dungeon. It's dark. What else is there to say? \n \n";
 	cout << "\t" << playerPos[0] << "---------------" << playerPos[1] << "---------------" << playerPos[2] << "\n";
@@ -19,6 +25,8 @@ BoardManager::BoardManager()
 	cout << "HP:					HP: \n\n";
 	cout << "What would you like to do?\n\n";
 	cout << "Move ";
+
+	
 }
 
 
@@ -29,10 +37,10 @@ BoardManager::~BoardManager()
 
 int BoardManager::GetPlayerPositions(char player) //pass in 'a' or 'b' depending on which player you're checking
 {
+	int temp = -1;
+
 	for (int i = 0; i < 9; i++)
 	{
-		int temp;
-
 		if (playerPos[i] != 'x') //if a location variable has an 'A' or 'B' value
 		{
 			if (playerPos[i] == player)
@@ -40,7 +48,7 @@ int BoardManager::GetPlayerPositions(char player) //pass in 'a' or 'b' depending
 				temp = i; //stores a value of 1-9 to show position
 			}
 		}
-
-		return temp;
 	}
+	
+	return temp;
 }
