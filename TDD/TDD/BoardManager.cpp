@@ -4,15 +4,6 @@
 
 BoardManager::BoardManager()
 {
-	// Grid position following cardinal directions as per Numpad
-	int gridPos[3][3] = {
-		{7, 8, 9},
-		{4, 5, 6},
-		{1, 2, 3}
-	};
-	char playerPos[9] = { 'x','x','x','x','x','x','x','x','x' };
-	char moveDir;
-
 	// Prints mapping out to screen
 	cout << "You are in a dungeon. It's dark. What else is there to say? \n \n";
 	cout << "\t" << playerPos[0] << "---------------" << playerPos[1] << "---------------" << playerPos[2] << "\n";
@@ -28,8 +19,6 @@ BoardManager::BoardManager()
 	cout << "HP:					HP: \n\n";
 	cout << "What would you like to do?\n\n";
 	cout << "Move ";
-
-	// If playerPosition = 7 && playerA then pNW = A
 }
 
 
