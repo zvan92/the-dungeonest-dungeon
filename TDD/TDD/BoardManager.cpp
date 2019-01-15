@@ -4,12 +4,25 @@
 
 BoardManager::BoardManager()
 {
-	playerPos[0] = 'A';
-	playerPos[8] = 'B';
-
 	playerAPos = GetPlayerPositions('A');
 	playerBPos = GetPlayerPositions('B');
 	
+
+}
+
+
+BoardManager::~BoardManager()
+{
+}
+
+void BoardManager::StartPlayerPositions()
+{
+	playerPos[0] = 'A';
+	playerPos[8] = 'B';
+}
+
+void BoardManager::DisplayBoard()
+{
 	// Prints mapping out to screen
 	cout << "You are in a dungeon. It's dark. What else is there to say? \n \n";
 	cout << "\t" << playerPos[0] << "---------------" << playerPos[1] << "---------------" << playerPos[2] << "\n";
@@ -25,15 +38,7 @@ BoardManager::BoardManager()
 	cout << "HP:					HP: \n\n";
 	cout << "What would you like to do?\n\n";
 	cout << "Move ";
-
-	
 }
-
-
-BoardManager::~BoardManager()
-{
-}
-
 
 int BoardManager::GetPlayerPositions(char player) //pass in 'a' or 'b' depending on which player you're checking
 {

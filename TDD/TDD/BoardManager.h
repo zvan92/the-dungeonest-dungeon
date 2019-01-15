@@ -7,11 +7,6 @@ class BoardManager
 {
 public:
 	// Grid position following cardinal directions as per Numpad
-	int gridPos[3][3] = {
-		{7, 8, 9},
-		{4, 5, 6},
-		{1, 2, 3}
-	};
 	int playerAPos;
 	int playerBPos;
 	char playerPos[9] = { 'x','x','x','x','x','x','x','x','x' };
@@ -19,6 +14,9 @@ public:
 
 	int GetPlayerPositions(char player);
 
+	void StartPlayerPositions();
+
+	void DisplayBoard();
 	BoardManager();
 	~BoardManager();
 };

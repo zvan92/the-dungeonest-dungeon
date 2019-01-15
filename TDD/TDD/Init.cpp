@@ -8,6 +8,8 @@ Init::Init()
 {
 	SetupPlayers();
 	BoardManager(); // ideally shouldn't display any text yet
+	BoardManager().StartPlayerPositions(); // Can't call member functions yet
+	//DisplayBoard();
 }
 
 
