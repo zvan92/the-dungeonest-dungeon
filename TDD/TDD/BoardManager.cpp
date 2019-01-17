@@ -5,6 +5,8 @@
 
 using namespace std;
 
+BoardManager *BoardManager::instance = 0; //was in .h before
+
 BoardManager::BoardManager()
 {
 	playerAPos = GetPlayerPositions('A');

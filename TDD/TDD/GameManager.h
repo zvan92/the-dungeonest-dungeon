@@ -19,5 +19,4 @@ private:
 	GameManager();
 	static GameManager* instance;
 };
-GameManager *GameManager::instance = 0;
 

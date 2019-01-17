@@ -36,4 +36,3 @@ private:
 	static BoardManager *instance;
 	
 };
-BoardManager *BoardManager::instance = 0;

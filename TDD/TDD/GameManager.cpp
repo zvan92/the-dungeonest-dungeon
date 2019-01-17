@@ -5,17 +5,17 @@
 
 using namespace std;
 
+GameManager *GameManager::instance = 0; //was in .h before
+
 GameManager::GameManager()
 {
 }
-
-
 GameManager::~GameManager()
 {
 }
 
 
-void StartPlayerTurn()
+void GameManager::StartPlayerTurn()
 {
 	//BoardManager::getInstance()->
 	cout << "what would you like to do?" << endl;
