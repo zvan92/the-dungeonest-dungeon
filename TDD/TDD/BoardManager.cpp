@@ -18,14 +18,29 @@ BoardManager::~BoardManager()
 
 void BoardManager::StartPlayerPositions()
 {
-	playerPos[0] = 'A';
-	playerPos[8] = 'B';
-	playerAPos = GetPlayerPositions('A');
-	playerBPos = GetPlayerPositions('B');
+	//playerPos[0] = 'A';
+	//playerPos[8] = 'B';
+	playerAPos = 0;
+	playerBPos = 8;
 }
 
 void BoardManager::DisplayBoard()
 {
+	for (int i = 0; i < 9; i++)
+	{
+		if (playerAPos == i)
+		{
+			playerPos[i] = 'A';
+		}
+		if (playerBPos == i)
+		{
+			playerPos[i] = 'B';
+		}
+		if (playerAPos != i && playerBPos != i)
+		{
+			playerPos[i] = 'x';
+		}			
+	}
 	// Prints mapping out to screen
 	cout << "You are in a dungeon. It's dark. What else is there\n to say? \n \n";
 	cout << "\t" << playerPos[0] << "---------------" << playerPos[1] << "---------------" << playerPos[2] << "\n";
