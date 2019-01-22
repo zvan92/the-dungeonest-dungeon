@@ -16,15 +16,62 @@ public:
 	}
 	~BoardManager();
 
+// GETTERS & SETTERS ==================================== //
 	int getPlayerAPos()
 	{
 		return playerAPos;
 	}
-	int getPlayerAPos()
+	void setPlayerAPos(int value)
 	{
-		return playerAPos;
+		playerAPos = value;
 	}
 
+	int getPlayerBPos()
+	{
+		return playerAPos;
+	}
+	void setPlayerBPos(int value)
+	{
+		playerBPos = value;
+	}
+
+	bool getPTurn()
+	{
+		return pTurn;
+	}
+	void setPTurn(bool value)
+	{
+		pTurn = value;
+	}
+	
+	char getPlayerPos(int index)
+	{
+		return playerPos[index];
+	}
+	void setPlayerPos(int index, char value)
+	{
+		playerPos[index] = value;
+	}
+
+	char getMoveDir()
+	{
+		return moveDir;
+	}
+	void setMoveDir(char value)
+	{
+		moveDir = value;
+	}
+
+	char getPlayerAction()
+	{
+		return playerAction;
+	}
+	void setPlayerAction(char value)
+	{
+		playerAction = value;
+	}
+
+// FUNCTIONS ============================================ //
 	void StartPlayerPositions();
 
 	void DisplayBoard();
@@ -32,11 +79,12 @@ public:
 	void PlayerTurn();
 
 	char PlayerAction();
+
 private:
 	BoardManager();
 
 	bool pTurn = 0;
-	int playerAPos;
+	int playerAPos; //when player calls 'move', call this to get their position
 	int playerBPos;
 	char playerPos[9] = { 'x','x','x','x','x','x','x','x','x' };
 	char moveDir;
