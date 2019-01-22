@@ -37,7 +37,7 @@ void BoardManager::DisplayBoard()
 	cout << "\t|		|		|\n";
 	cout << "\t|		|		|\n";
 	cout << "\t" << playerPos[6] << "---------------" << playerPos[7] << "---------------" << playerPos[8] << "\n\n";
-	cout << "\t" << players[0].getName() << "\t\t\t" << players[1].getName() << endl;
+	cout << "\tA: " << players[0].getName() << "\t\t\tB: " << players[1].getName() << endl;
 	cout << "\tHP: " << players[0].getHealth() << "\t\t\tHP: " << players[1].getHealth() << endl;
 	cout << endl;
 	do
@@ -59,18 +59,18 @@ char BoardManager::PlayerAction()
 	cin >> playerAction;
 	if (playerAction == 'a')
 	{
-		players[0].Attack();
 		PlayerTurn();
+		players[0].Attack();
 	}
 	else if (playerAction == 'm')
 	{
-		players[0].Move();
 		PlayerTurn();
+		players[0].Move();
 	}
 	else if (playerAction == 'e')
 	{
-		players[0].EndTurn();
 		PlayerTurn();
+		players[0].EndTurn();
 	}
 	else if (playerAction != 'a' || playerAction != 'm' || playerAction != 'e')
 	{

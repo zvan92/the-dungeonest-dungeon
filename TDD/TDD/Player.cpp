@@ -1,7 +1,6 @@
 #include "pch.h"
 #include "Player.h"
-#include "GameManager.h"
-
+#include "BoardManager.h"
 
 Player::Player()
 {
@@ -14,8 +13,12 @@ Player::~Player()
 
 void Player::Attack()
 {
+	//int n = GetPlayerPositions();
 	// attack if a player is nearby
+	/*switch (n)
+	{
 
+	}*/
 }
 
 
@@ -30,4 +33,6 @@ void Player::Move()
 void Player::EndTurn()
 {
 	// end turn
+	system("CLS");
+	BoardManager::getInstance()->DisplayBoard();
 }
