@@ -24,8 +24,8 @@ void Init::SetupPlayers()
 		cout << "Enter player " << i+1 << " name: ";
 		cin >> name;
 		cout << endl;
-		BoardManager::getInstance()->getPlayers(i).setName(name);
-		BoardManager::getInstance()->getPlayers(i).setHealth(100);
+		BoardManager::getInstance()->players[i].setName(name);
+		BoardManager::getInstance()->players[i].setHealth(100);
 		system("CLS");
 	}
 }
