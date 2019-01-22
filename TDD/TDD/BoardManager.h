@@ -16,7 +16,14 @@ public:
 	}
 	~BoardManager();
 
-	int GetPlayerPositions(char player);
+	int getPlayerAPos()
+	{
+		return playerAPos;
+	}
+	int getPlayerAPos()
+	{
+		return playerAPos;
+	}
 
 	void StartPlayerPositions();
 
