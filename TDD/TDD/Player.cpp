@@ -54,164 +54,189 @@ void Player::Move()
 
 	cout << "Where would you like to go?: ";
 	cin >> moveDir;
-	if (moveDir != 'n' || moveDir != 'e' || moveDir != 's' || moveDir != 'w'/* || moveDir != 'c'*/)
-		cout << "\n\nInvalid Direction.\n\n";
-	else
+	if (moveDir == 'n' || moveDir == 'e' || moveDir == 's' || moveDir == 'w'/* || moveDir != 'c'*/)
 	{
+		// move position based on a passed in direction value
 		switch (playerPos)
 		{
 		case 0:
-			if (moveDir = 'e')
+			if (moveDir == 'e')
 			{
 				BoardManager::getInstance()->setPlayerPos(1, pX);
 				EndTurn();
+				break;
 			}
-			else if (moveDir = 's')
+			if (moveDir == 's')
 			{
 				BoardManager::getInstance()->setPlayerPos(3, pX);
 				EndTurn();
+				break;
 			}
 			else
+			{
 				cout << "\n\nInvalid Direction.\n\n";
+				break;
+			}
 		case 1:
-			if (moveDir = 'e')
+			if (moveDir == 'e')
 			{
 				BoardManager::getInstance()->setPlayerPos(2, pX);
 				EndTurn();
+				break;
 			}
-			else if (moveDir = 's')
+			if (moveDir == 's')
 			{
 				BoardManager::getInstance()->setPlayerPos(4, pX);
 				EndTurn();
+				break;
 			}
-			else if (moveDir = 'w')
+			if (moveDir == 'w')
 			{
 				BoardManager::getInstance()->setPlayerPos(0, pX);
 				EndTurn();
+				break;
 			}
 			else
 				cout << "\n\nInvalid Direction.\n\n";
 		case 2:
-			if (moveDir = 'w')
+			if (moveDir == 'w')
 			{
 				BoardManager::getInstance()->setPlayerPos(1, pX);
 				EndTurn();
+				break;
 			}
-			else if (moveDir = 's')
+			if (moveDir =='s')
 			{
 				BoardManager::getInstance()->setPlayerPos(5, pX);
 				EndTurn();
+				break;
 			}
 			else
 				cout << "\n\nInvalid Direction.\n\n";
 		case 3:
-			if (moveDir = 'n')
+			if (moveDir == 'n')
 			{
 				BoardManager::getInstance()->setPlayerPos(0, pX);
 				EndTurn();
+				break;
 			}
-			else if (moveDir = 's')
+			if (moveDir == 's')
 			{
 				BoardManager::getInstance()->setPlayerPos(6, pX);
 				EndTurn();
+				break;
 			}
-			else if (moveDir = 'e')
+			if (moveDir == 'e')
 			{
 				BoardManager::getInstance()->setPlayerPos(4, pX);
 				EndTurn();
+				break;
 			}
 			else
 				cout << "\n\nInvalid Direction.\n\n";
 		case 4:
-			if (moveDir = 'n')
+			if (moveDir == 'n')
 			{
 				BoardManager::getInstance()->setPlayerPos(1, pX);
 				EndTurn();
+				break;
 			}
-			else if (moveDir = 's')
+			if (moveDir == 's')
 			{
 				BoardManager::getInstance()->setPlayerPos(7, pX);
 				EndTurn();
+				break;
 			}
-			else if (moveDir = 'e')
+			if (moveDir == 'e')
 			{
 				BoardManager::getInstance()->setPlayerPos(5, pX);
 				EndTurn();
+				break;
 			}
-			else if (moveDir = 'w')
+			if (moveDir == 'w')
 			{
 				BoardManager::getInstance()->setPlayerPos(3, pX);
 				EndTurn();
+				break;
 			}
 			else
 				cout << "\n\nInvalid Direction.\n\n";
 		case 5:
-			if (moveDir = 'n')
+			if (moveDir == 'n')
 			{
 				BoardManager::getInstance()->setPlayerPos(2, pX);
 				EndTurn();
+				break;
 			}
-			else if (moveDir = 's')
+			if (moveDir == 's')
 			{
 				BoardManager::getInstance()->setPlayerPos(8, pX);
 				EndTurn();
+				break;
 			}
-			else if (moveDir = 'w')
+			if (moveDir == 'w')
 			{
 				BoardManager::getInstance()->setPlayerPos(4, pX);
 				EndTurn();
+				break;
 			}
 			else
 				cout << "\n\nInvalid Direction.\n\n";
 		case 6:
-			if (moveDir = 'n')
+			if (moveDir == 'n')
 			{
 				BoardManager::getInstance()->setPlayerPos(3, pX);
 				EndTurn();
+				break;
 			}
-			else if (moveDir = 'e')
+			if (moveDir == 'e')
 			{
 				BoardManager::getInstance()->setPlayerPos(7, pX);
 				EndTurn();
+				break;
 			}
 			else
 				cout << "\n\nInvalid Direction.\n\n";
 		case 7:
-			if (moveDir = 'n')
+			if (moveDir == 'n')
 			{
 				BoardManager::getInstance()->setPlayerPos(4, pX);
 				EndTurn();
+				break;
 			}
-			else if (moveDir = 'e')
+			if (moveDir == 'e')
 			{
 				BoardManager::getInstance()->setPlayerPos(8, pX);
 				EndTurn();
+				break;
 			}
-			else if (moveDir = 'w')
+			if (moveDir == 'w')
 			{
 				BoardManager::getInstance()->setPlayerPos(6, pX);
 				EndTurn();
+				break;
 			}
 			else
 				cout << "\n\nInvalid Direction.\n\n";
 		case 8:
-			if (moveDir = 'n')
+			if (moveDir == 'n')
 			{
 				BoardManager::getInstance()->setPlayerPos(5, pX);
 				EndTurn();
+				break;
 			}
-			else if (moveDir = 'w')
+			if (moveDir == 'w')
 			{
 				BoardManager::getInstance()->setPlayerPos(7, pX);
 				EndTurn();
+				break;
 			}
 			else
 				cout << "\n\nInvalid Direction.\n\n";
 		}
 	}
-	// move position based on a passed in direction value
-	
-
+	else
+		cout << "\n\nInvalid Direction.\n\n";
 }
 
 
@@ -219,5 +244,6 @@ void Player::EndTurn()
 {
 	// end turn
 	system("CLS");
+	BoardManager::getInstance()->PlayerTurn();
 	BoardManager::getInstance()->DisplayBoard();
 }

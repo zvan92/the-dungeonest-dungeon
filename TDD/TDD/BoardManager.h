@@ -30,7 +30,7 @@ public:
 
 	int getPlayerBPos()
 	{
-		return playerAPos;
+		return playerBPos;
 	}
 	void setPlayerBPos(int value)
 	{

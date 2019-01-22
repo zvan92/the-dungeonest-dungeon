@@ -9,8 +9,6 @@ BoardManager *BoardManager::instance = 0; //was in .h before
 
 BoardManager::BoardManager()
 {
-	//playerAPos = GetPlayerPositions('A');
-	//playerBPos = GetPlayerPositions('B')
 }
 
 
@@ -22,6 +20,8 @@ void BoardManager::StartPlayerPositions()
 {
 	playerPos[0] = 'A';
 	playerPos[8] = 'B';
+	playerAPos = GetPlayerPositions('A');
+	playerBPos = GetPlayerPositions('B');
 }
 
 void BoardManager::DisplayBoard()
@@ -59,18 +59,15 @@ char BoardManager::PlayerAction()
 	cin >> playerAction;
 	if (playerAction == 'a')
 	{
-		PlayerTurn();
-		players[0].Attack();
+		players[pTurn].Attack();
 	}
 	else if (playerAction == 'm')
 	{
-		PlayerTurn();
-		players[0].Move();
+		players[pTurn].Move();
 	}
 	else if (playerAction == 'e')
 	{
-		PlayerTurn();
-		players[0].EndTurn();
+		players[pTurn].EndTurn();
 	}
 	else if (playerAction != 'a' || playerAction != 'm' || playerAction != 'e')
 	{
