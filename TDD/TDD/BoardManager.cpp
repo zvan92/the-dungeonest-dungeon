@@ -40,34 +40,41 @@ void BoardManager::DisplayBoard()
 	cout << "\t" << players[0].getName() << "\t\t\t" << players[1].getName() << endl;
 	cout << "\tHP: " << players[0].getHealth() << "\t\t\tHP: " << players[1].getHealth() << endl;
 	cout << endl;
-	cout << "What would you like to do?\n\n";
 	do
 	{
 		PlayerAction();
 	} while (PlayerAction() == NULL);
 }
 
+void BoardManager::PlayerTurn()
+{
+	pTurn = !pTurn;
+}
+
 char BoardManager::PlayerAction()
 {
+	cout << "It's " << players[pTurn].getName() << "'s turn.\n\n";
+	cout << "What would you like to do?\n\n";
 	cout << "(A)ttack \n(M)ove \n(E)nd Turn \n\nYour choice: ";
 	cin >> playerAction;
-	/*do	{
-		cout << "playerAction: " << playerAction << endl;
-		cout << "Invalid input. Please enter 'a' for attack, 'm' for move or 'e' for end turn." << endl;
-		cout << "(A)ttack \n(M)ove \n(E)nd Turn \n\nYour choice: ";
-		playerAction = NULL;
-		cout << "playerAction: " << playerAction << endl;
-		cin >> playerAction;
-	} while (playerAction != 'a' || playerAction != 'm' || playerAction != 'e');*/
 	if (playerAction == 'a')
+	{
 		players[0].Attack();
+		PlayerTurn();
+	}
 	else if (playerAction == 'm')
+	{
 		players[0].Move();
+		PlayerTurn();
+	}
 	else if (playerAction == 'e')
+	{
 		players[0].EndTurn();
+		PlayerTurn();
+	}
 	else if (playerAction != 'a' || playerAction != 'm' || playerAction != 'e')
 	{
-		cout << "Invalid input. Please enter 'a' for attack, 'm' for move or 'e' for end turn." << endl;
+		cout << "\nInvalid input. Please enter 'a' for attack, 'm' for move or 'e' for end turn.\n\n";
 		return NULL;
 	}
 	

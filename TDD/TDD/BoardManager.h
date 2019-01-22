@@ -23,12 +23,15 @@ public:
 	char moveDir;
 	char playerAction;
 	Player players[2];
+	bool pTurn = 0;
 
 	int GetPlayerPositions(char player);
 
 	void StartPlayerPositions();
 
 	void DisplayBoard();
+
+	void PlayerTurn();
 
 	char PlayerAction();
 private:

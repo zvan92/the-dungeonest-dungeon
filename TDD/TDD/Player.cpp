@@ -15,13 +15,15 @@ Player::~Player()
 void Player::Attack()
 {
 	// attack if a player is nearby
+
 }
 
 
 void Player::Move()
 {
-	GameManager::getInstance()->StartPlayerTurn();
+	//GameManager::getInstance()->StartPlayerTurn();
 	// move position based on a passed in direction value
+
 }
 
 

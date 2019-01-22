@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "GameManager.h"
 #include "Init.h"
+#include "BoardManager.h"
 #include <iostream>
 
 using namespace std;

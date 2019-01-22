@@ -32,7 +32,7 @@ public:
 	{
 		if (value != NULL)
 		{
-			health = value;
+			health = health - value;
 		}
 	}
 	void setName(string value)
