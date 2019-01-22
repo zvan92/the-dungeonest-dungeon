@@ -71,11 +71,6 @@ public:
 		playerAction = value;
 	}
 
-	Player getPlayers(int index)
-	{
-		return players[index];
-	}
-
 // FUNCTIONS ============================================ //
 	void StartPlayerPositions();
 
