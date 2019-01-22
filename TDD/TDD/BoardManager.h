@@ -16,6 +16,8 @@ public:
 	}
 	~BoardManager();
 
+	Player players[2];
+
 // GETTERS & SETTERS ==================================== //
 	int getPlayerAPos()
 	{
@@ -91,7 +93,6 @@ private:
 	char playerPos[9] = { 'x','x','x','x','x','x','x','x','x' };
 	char moveDir;
 	char playerAction;
-	Player players[2];
 
 	static BoardManager *instance;
 
