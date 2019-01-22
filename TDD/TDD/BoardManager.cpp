@@ -10,7 +10,7 @@ BoardManager *BoardManager::instance = 0; //was in .h before
 BoardManager::BoardManager()
 {
 	//playerAPos = GetPlayerPositions('A');
-	//playerBPos = GetPlayerPositions('B');
+	//playerBPos = GetPlayerPositions('B')
 }
 
 
