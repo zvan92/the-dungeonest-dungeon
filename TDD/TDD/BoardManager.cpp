@@ -81,7 +81,7 @@ char BoardManager::PlayerAction()
 	return playerAction;
 }
 
-int BoardManager::GetPlayerPositions(char player) //pass in 'a' or 'b' depending on which player you're checking
+int BoardManager::GetPlayerPositions(char player) //pass in 'A' or 'B' depending on which player you're checking
 {
 	int temp = -1;
 
