@@ -80,6 +80,8 @@ public:
 
 	char PlayerAction();
 
+	int GetPlayerPositions(char player);
+
 private:
 	BoardManager();
 
