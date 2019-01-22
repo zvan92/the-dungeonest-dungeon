@@ -71,6 +71,11 @@ public:
 		playerAction = value;
 	}
 
+	Player getPlayers(int index)
+	{
+		return players[index];
+	}
+
 // FUNCTIONS ============================================ //
 	void StartPlayerPositions();
 
@@ -91,7 +96,6 @@ private:
 	char playerPos[9] = { 'x','x','x','x','x','x','x','x','x' };
 	char moveDir;
 	char playerAction;
-	
 	Player players[2];
 
 	static BoardManager *instance;
