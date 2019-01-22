@@ -25,7 +25,7 @@ void Init::SetupPlayers()
 		cin >> name;
 		cout << endl;
 		BoardManager::getInstance()->players[i].setName(name);
-		//BoardManager::getInstance()->players[i].setHealth(100); <--- probably throwing error because instance is destroyed after every getInstance() call finishes
+		BoardManager::getInstance()->players[i].setHealth(100); //<--- probably throwing error because instance is destroyed after every getInstance() call finishes
 		system("CLS");
 	}
 }

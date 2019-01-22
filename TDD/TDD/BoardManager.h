@@ -11,8 +11,8 @@ public:
 		if (!instance)
 		{
 			instance = new BoardManager();
-			return instance;
 		}
+		return instance;
 	}
 	~BoardManager();
 
