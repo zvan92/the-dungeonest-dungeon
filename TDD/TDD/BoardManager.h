@@ -16,15 +16,6 @@ public:
 	}
 	~BoardManager();
 
-	// Grid position following cardinal directions as per Numpad
-	int playerAPos;
-	int playerBPos;
-	char playerPos[9] = { 'x','x','x','x','x','x','x','x','x' };
-	char moveDir;
-	char playerAction;
-	Player players[2];
-	bool pTurn = 0;
-
 	int GetPlayerPositions(char player);
 
 	void StartPlayerPositions();
@@ -36,6 +27,18 @@ public:
 	char PlayerAction();
 private:
 	BoardManager();
+
+	bool pTurn = 0;
+	int playerAPos;
+	int playerBPos;
+	char playerPos[9] = { 'x','x','x','x','x','x','x','x','x' };
+	char moveDir;
+	char playerAction;
+	
+	Player players[2];
+
 	static BoardManager *instance;
+
+	
 	
 };
