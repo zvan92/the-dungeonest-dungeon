@@ -43,15 +43,24 @@ public:
 			name = value;
 		}
 	}
-
+	bool getCanMove()
+	{
+		return canMove;
+	}
+	void setCanMove(bool value)
+	{
+		canMove = value;
+	}
 	void Attack();
 	void Move();
 	void EndTurn();
+	void ExecuteMove(int pos, char player);
 
 	~Player();
 private:
 	string name;
 	int health;
 	int damage;
+	bool canMove;
 };
 

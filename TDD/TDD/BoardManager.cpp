@@ -18,10 +18,16 @@ BoardManager::~BoardManager()
 
 void BoardManager::StartPlayerPositions()
 {
-	//playerPos[0] = 'A';
-	//playerPos[8] = 'B';
 	playerAPos = 0;
 	playerBPos = 8;
+}
+
+bool BoardManager::checkCollision()
+{
+	if (playerAPos == playerBPos)
+		return true;
+	else
+		return false;
 }
 
 void BoardManager::DisplayBoard()

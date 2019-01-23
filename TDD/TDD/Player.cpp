@@ -33,6 +33,53 @@ void Player::Attack()
 	}
 }
 
+void Player::ExecuteMove(int pos, char player)
+{
+	int cPos;
+
+	if (player == 'A')
+	{
+		cPos = BoardManager::getInstance()->getPlayerAPos();
+	}
+		
+	if (player == 'B')
+	{
+		cPos = BoardManager::getInstance()->getPlayerBPos();
+	}
+	
+	BoardManager::getInstance()->setPlayerPos(pos, player);
+	if (player == 'A')
+	{
+		BoardManager::getInstance()->setPlayerAPos(pos);
+	}
+		
+	if (player == 'B')
+	{
+		BoardManager::getInstance()->setPlayerBPos(pos);
+	}
+		
+	if (BoardManager::getInstance()->checkCollision() == false)
+	{
+		canMove = true;
+	}
+
+	if (BoardManager::getInstance()->checkCollision() == true)
+	{
+		cout << "You can't move into an occupied position.\n\n";
+		system("PAUSE");
+		if (player == 'A')
+		{
+			pos = cPos;
+			BoardManager::getInstance()->setPlayerAPos(pos);
+		}
+		if (player == 'B')
+		{
+			pos = cPos;
+			BoardManager::getInstance()->setPlayerBPos(pos);
+		}
+	}
+	
+}
 
 void Player::Move()
 {
@@ -40,6 +87,7 @@ void Player::Move()
 	int playerPos;
 	char moveDir;
 	char pX;
+	canMove = false;
 
 	if (!playerTurn)
 	{
@@ -62,21 +110,13 @@ void Player::Move()
 		case 0:
 			if (moveDir == 'e')
 			{
-				BoardManager::getInstance()->setPlayerPos(1, pX);
-				if (pX == 'A')
-					BoardManager::getInstance()->setPlayerAPos(1);
-				if (pX == 'B')
-					BoardManager::getInstance()->setPlayerBPos(1);
+				ExecuteMove(1, pX);
 				EndTurn();
 				break;
 			}
 			if (moveDir == 's')
 			{
-				BoardManager::getInstance()->setPlayerPos(3, pX);
-				if (pX == 'A')
-					BoardManager::getInstance()->setPlayerAPos(3);
-				if (pX == 'B')
-					BoardManager::getInstance()->setPlayerBPos(3);
+				ExecuteMove(3, pX);
 				EndTurn();
 				break;
 			}
@@ -88,31 +128,19 @@ void Player::Move()
 		case 1:
 			if (moveDir == 'e')
 			{
-				BoardManager::getInstance()->setPlayerPos(2, pX);
-				if (pX == 'A')
-					BoardManager::getInstance()->setPlayerAPos(2);
-				if (pX == 'B')
-					BoardManager::getInstance()->setPlayerBPos(2);
+				ExecuteMove(2, pX);
 				EndTurn();
 				break;
 			}
 			if (moveDir == 's')
 			{
-				BoardManager::getInstance()->setPlayerPos(4, pX);
-				if (pX == 'A')
-					BoardManager::getInstance()->setPlayerAPos(4);
-				if (pX == 'B')
-					BoardManager::getInstance()->setPlayerBPos(4);
+				ExecuteMove(4, pX);
 				EndTurn();
 				break;
 			}
 			if (moveDir == 'w')
 			{
-				BoardManager::getInstance()->setPlayerPos(0, pX);
-				if (pX == 'A')
-					BoardManager::getInstance()->setPlayerAPos(0);
-				if (pX == 'B')
-					BoardManager::getInstance()->setPlayerBPos(0);
+				ExecuteMove(0, pX);
 				EndTurn();
 				break;
 			}
@@ -121,21 +149,13 @@ void Player::Move()
 		case 2:
 			if (moveDir == 'w')
 			{
-				BoardManager::getInstance()->setPlayerPos(1, pX);
-				if (pX == 'A')
-					BoardManager::getInstance()->setPlayerAPos(1);
-				if (pX == 'B')
-					BoardManager::getInstance()->setPlayerBPos(1);
+				ExecuteMove(1, pX);
 				EndTurn();
 				break;
 			}
 			if (moveDir =='s')
 			{
-				BoardManager::getInstance()->setPlayerPos(5, pX);
-				if (pX == 'A')
-					BoardManager::getInstance()->setPlayerAPos(5);
-				if (pX == 'B')
-					BoardManager::getInstance()->setPlayerBPos(5);
+				ExecuteMove(5, pX);
 				EndTurn();
 				break;
 			}
@@ -144,31 +164,19 @@ void Player::Move()
 		case 3:
 			if (moveDir == 'n')
 			{
-				BoardManager::getInstance()->setPlayerPos(0, pX);
-				if (pX == 'A')
-					BoardManager::getInstance()->setPlayerAPos(0);
-				if (pX == 'B')
-					BoardManager::getInstance()->setPlayerBPos(0);
+				ExecuteMove(0, pX);
 				EndTurn();
 				break;
 			}
 			if (moveDir == 's')
 			{
-				BoardManager::getInstance()->setPlayerPos(6, pX);
-				if (pX == 'A')
-					BoardManager::getInstance()->setPlayerAPos(6);
-				if (pX == 'B')
-					BoardManager::getInstance()->setPlayerBPos(6);
+				ExecuteMove(6, pX);
 				EndTurn();
 				break;
 			}
 			if (moveDir == 'e')
 			{
-				BoardManager::getInstance()->setPlayerPos(4, pX);
-				if (pX == 'A')
-					BoardManager::getInstance()->setPlayerAPos(4);
-				if (pX == 'B')
-					BoardManager::getInstance()->setPlayerBPos(4);
+				ExecuteMove(4, pX);
 				EndTurn();
 				break;
 			}
@@ -177,41 +185,25 @@ void Player::Move()
 		case 4:
 			if (moveDir == 'n')
 			{
-				BoardManager::getInstance()->setPlayerPos(1, pX);
-				if (pX == 'A')
-					BoardManager::getInstance()->setPlayerAPos(1);
-				if (pX == 'B')
-					BoardManager::getInstance()->setPlayerBPos(1);
+				ExecuteMove(1, pX);
 				EndTurn();
 				break;
 			}
 			if (moveDir == 's')
 			{
-				BoardManager::getInstance()->setPlayerPos(7, pX);
-				if (pX == 'A')
-					BoardManager::getInstance()->setPlayerAPos(7);
-				if (pX == 'B')
-					BoardManager::getInstance()->setPlayerBPos(7);
+				ExecuteMove(7, pX);
 				EndTurn();
 				break;
 			}
 			if (moveDir == 'e')
 			{
-				BoardManager::getInstance()->setPlayerPos(5, pX);
-				if (pX == 'A')
-					BoardManager::getInstance()->setPlayerAPos(5);
-				if (pX == 'B')
-					BoardManager::getInstance()->setPlayerBPos(5);
+				ExecuteMove(5, pX);
 				EndTurn();
 				break;
 			}
 			if (moveDir == 'w')
 			{
-				BoardManager::getInstance()->setPlayerPos(3, pX);
-				if (pX == 'A')
-					BoardManager::getInstance()->setPlayerAPos(3);
-				if (pX == 'B')
-					BoardManager::getInstance()->setPlayerBPos(3);
+				ExecuteMove(3, pX);
 				EndTurn();
 				break;
 			}
@@ -220,31 +212,19 @@ void Player::Move()
 		case 5:
 			if (moveDir == 'n')
 			{
-				BoardManager::getInstance()->setPlayerPos(2, pX);
-				if (pX == 'A')
-					BoardManager::getInstance()->setPlayerAPos(2);
-				if (pX == 'B')
-					BoardManager::getInstance()->setPlayerBPos(2);
+				ExecuteMove(2, pX);
 				EndTurn();
 				break;
 			}
 			if (moveDir == 's')
 			{
-				BoardManager::getInstance()->setPlayerPos(8, pX);
-				if (pX == 'A')
-					BoardManager::getInstance()->setPlayerAPos(8);
-				if (pX == 'B')
-					BoardManager::getInstance()->setPlayerBPos(8);
+				ExecuteMove(8, pX);
 				EndTurn();
 				break;
 			}
 			if (moveDir == 'w')
 			{
-				BoardManager::getInstance()->setPlayerPos(4, pX);
-				if (pX == 'A')
-					BoardManager::getInstance()->setPlayerAPos(4);
-				if (pX == 'B')
-					BoardManager::getInstance()->setPlayerBPos(4);
+				ExecuteMove(4, pX);
 				EndTurn();
 				break;
 			}
@@ -253,21 +233,13 @@ void Player::Move()
 		case 6:
 			if (moveDir == 'n')
 			{
-				BoardManager::getInstance()->setPlayerPos(3, pX);
-				if (pX == 'A')
-					BoardManager::getInstance()->setPlayerAPos(3);
-				if (pX == 'B')
-					BoardManager::getInstance()->setPlayerBPos(3);
+				ExecuteMove(3, pX);
 				EndTurn();
 				break;
 			}
 			if (moveDir == 'e')
 			{
-				BoardManager::getInstance()->setPlayerPos(7, pX);
-				if (pX == 'A')
-					BoardManager::getInstance()->setPlayerAPos(7);
-				if (pX == 'B')
-					BoardManager::getInstance()->setPlayerBPos(7);
+				ExecuteMove(7, pX);
 				EndTurn();
 				break;
 			}
@@ -276,31 +248,19 @@ void Player::Move()
 		case 7:
 			if (moveDir == 'n')
 			{
-				BoardManager::getInstance()->setPlayerPos(4, pX);
-				if (pX == 'A')
-					BoardManager::getInstance()->setPlayerAPos(4);
-				if (pX == 'B')
-					BoardManager::getInstance()->setPlayerBPos(4);
+				ExecuteMove(4, pX);
 				EndTurn();
 				break;
 			}
 			if (moveDir == 'e')
 			{
-				BoardManager::getInstance()->setPlayerPos(8, pX);
-				if (pX == 'A')
-					BoardManager::getInstance()->setPlayerAPos(8);
-				if (pX == 'B')
-					BoardManager::getInstance()->setPlayerBPos(8);
+				ExecuteMove(8, pX);
 				EndTurn();
 				break;
 			}
 			if (moveDir == 'w')
 			{
-				BoardManager::getInstance()->setPlayerPos(6, pX);
-				if (pX == 'A')
-					BoardManager::getInstance()->setPlayerAPos(6);
-				if (pX == 'B')
-					BoardManager::getInstance()->setPlayerBPos(6);
+				ExecuteMove(6, pX);
 				EndTurn();
 				break;
 			}
@@ -309,21 +269,13 @@ void Player::Move()
 		case 8:
 			if (moveDir == 'n')
 			{
-				BoardManager::getInstance()->setPlayerPos(5, pX);
-				if (pX == 'A')
-					BoardManager::getInstance()->setPlayerAPos(5);
-				if (pX == 'B')
-					BoardManager::getInstance()->setPlayerBPos(5);
+				ExecuteMove(5, pX);
 				EndTurn();
 				break;
 			}
 			if (moveDir == 'w')
 			{
-				BoardManager::getInstance()->setPlayerPos(7, pX);
-				if (pX == 'A')
-					BoardManager::getInstance()->setPlayerAPos(7);
-				if (pX == 'B')
-					BoardManager::getInstance()->setPlayerBPos(7);
+				ExecuteMove(7, pX);
 				EndTurn();
 				break;
 			}
@@ -340,6 +292,9 @@ void Player::EndTurn()
 {
 	// end turn
 	system("CLS");
-	BoardManager::getInstance()->PlayerTurn();
+	if (getCanMove())
+	{
+		BoardManager::getInstance()->PlayerTurn();
+	}
 	BoardManager::getInstance()->DisplayBoard();
 }

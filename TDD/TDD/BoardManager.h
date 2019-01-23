@@ -82,6 +82,8 @@ public:
 
 	char PlayerAction();
 
+	bool checkCollision();
+
 	int GetPlayerPositions(char player);
 
 private:

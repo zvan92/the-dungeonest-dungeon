@@ -152,14 +152,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="BoardManager.h" />
-    <ClInclude Include="GameManager.h" />
     <ClInclude Include="Init.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Player.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BoardManager.cpp" />
-    <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="Init.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
