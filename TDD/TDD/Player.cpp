@@ -11,6 +11,13 @@ Player::~Player()
 {
 }
 
+void Player::ExecuteAttack(int pX)
+{
+	int currentPlayer = pX;
+
+
+}
+
 void Player::Attack()
 {
 	// attack if a player is nearby
@@ -18,18 +25,309 @@ void Player::Attack()
 	int playerAPos;
 	int playerBPos;
 	char pX;
+	bool canAttack = false;
 
 	if (!playerTurn)
 	{
 		playerAPos = BoardManager::getInstance()->getPlayerAPos();
 		pX = 'A';
 		playerBPos = BoardManager::getInstance()->getPlayerBPos();
+
+		switch (playerAPos)
+		{
+		case 0:
+			if (playerBPos == 1)
+			{
+				Player::ExecuteAttack('A');
+			}
+			if (playerBPos == 3)
+			{
+				Player::ExecuteAttack('A');
+			}
+			else
+			{
+				cout << "Player B is not in an adjacent tile.";
+			}
+		case 1:
+			if (playerBPos == 0)
+			{
+				Player::ExecuteAttack('A');
+			}
+			if (playerBPos == 2)
+			{
+				Player::ExecuteAttack('A');
+			}
+			if (playerBPos == 4)
+			{
+				Player::ExecuteAttack('A');
+			}
+			else
+			{
+				cout << "Player B is not in an adjacent tile.";
+			}
+		case 2:
+			if (playerBPos == 1)
+			{
+				Player::ExecuteAttack('A');
+			}
+			if (playerBPos == 5)
+			{
+				Player::ExecuteAttack('A');
+			}
+			else
+			{
+				cout << "Player B is not in an adjacent tile.";
+			}
+		case 3:
+			if (playerBPos == 0)
+			{
+				Player::ExecuteAttack('A');
+			}
+			if (playerBPos == 4)
+			{
+				Player::ExecuteAttack('A');
+			}
+			if (playerBPos == 6)
+			{
+				Player::ExecuteAttack('A');
+			}
+			else
+			{
+				cout << "Player B is not in an adjacent tile.";
+			}
+		case 4:
+			if (playerBPos == 1)
+			{
+				Player::ExecuteAttack('A');
+			}
+			if (playerBPos == 3)
+			{
+				Player::ExecuteAttack('A');
+			}
+			if (playerBPos == 5)
+			{
+				Player::ExecuteAttack('A');
+			}
+			if (playerBPos == 7)
+			{
+				Player::ExecuteAttack('A');
+			}
+			else
+			{
+				cout << "Player B is not in an adjacent tile.";
+			}
+		case 5:
+			if (playerBPos == 4)
+			{
+				Player::ExecuteAttack('A');
+			}
+			if (playerBPos == 2)
+			{
+				Player::ExecuteAttack('A');
+			}
+			if (playerBPos == 8)
+			{
+				Player::ExecuteAttack('A');
+			}
+			else
+			{
+				cout << "Player B is not in an adjacent tile.";
+			}
+		case 6:
+			if (playerBPos == 3)
+			{
+				Player::ExecuteAttack('A');
+			}
+			if (playerBPos == 7)
+			{
+				Player::ExecuteAttack('A');
+			}
+			else
+			{
+				cout << "Player B is not in an adjacent tile.";
+			}
+		case 7:
+			if (playerBPos == 4)
+			{
+				Player::ExecuteAttack('A');
+			}
+			if (playerBPos == 6)
+			{
+				Player::ExecuteAttack('A');
+			}
+			if (playerBPos == 8)
+			{
+				Player::ExecuteAttack('A');
+			}
+			else
+			{
+				cout << "Player B is not in an adjacent tile.";
+			}
+		case 8:
+			if (playerBPos == 5)
+			{
+				Player::ExecuteAttack('A');
+			}
+			if (playerBPos == 7)
+			{
+				Player::ExecuteAttack('A');
+			}
+			else
+			{
+				cout << "Player B is not in an adjacent tile.";
+			}
+		}
 	}
-	else
+	if (playerTurn)
 	{
 		playerBPos = BoardManager::getInstance()->getPlayerBPos();
 		pX = 'B';
 		playerAPos = BoardManager::getInstance()->getPlayerAPos();
+
+		switch (playerBPos)
+		{
+		case 0:
+			if (playerAPos == 1)
+			{
+				Player::ExecuteAttack('B');
+			}
+			if (playerAPos == 3)
+			{
+				Player::ExecuteAttack('B');
+			}
+			else
+			{
+				cout << "Player B is not in an adjacent tile.";
+			}
+		case 1:
+			if (playerAPos == 0)
+			{
+				Player::ExecuteAttack('B');
+			}
+			if (playerAPos == 2)
+			{
+				Player::ExecuteAttack('B');
+			}
+			if (playerAPos == 4)
+			{
+				Player::ExecuteAttack('B');
+			}
+			else
+			{
+				cout << "Player B is not in an adjacent tile.";
+			}
+		case 2:
+			if (playerAPos == 1)
+			{
+				Player::ExecuteAttack('B');
+			}
+			if (playerAPos == 5)
+			{
+				Player::ExecuteAttack('B');
+			}
+			else
+			{
+				cout << "Player B is not in an adjacent tile.";
+			}
+		case 3:
+			if (playerAPos == 0)
+			{
+				Player::ExecuteAttack('B');
+			}
+			if (playerAPos == 4)
+			{
+				Player::ExecuteAttack('B');
+			}
+			if (playerAPos == 6)
+			{
+				Player::ExecuteAttack('B');
+			}
+			else
+			{
+				cout << "Player B is not in an adjacent tile.";
+			}
+		case 4:
+			if (playerAPos == 1)
+			{
+				Player::ExecuteAttack('B');
+			}
+			if (playerAPos == 3)
+			{
+				Player::ExecuteAttack('B');
+			}
+			if (playerAPos == 5)
+			{
+				Player::ExecuteAttack('B');
+			}
+			if (playerAPos == 7)
+			{
+				Player::ExecuteAttack('B');
+			}
+			else
+			{
+				cout << "Player B is not in an adjacent tile.";
+			}
+		case 5:
+			if (playerAPos == 4)
+			{
+				Player::ExecuteAttack('B');
+			}
+			if (playerAPos == 2)
+			{
+				Player::ExecuteAttack('B');
+			}
+			if (playerAPos == 8)
+			{
+				Player::ExecuteAttack('B');
+			}
+			else
+			{
+				cout << "Player B is not in an adjacent tile.";
+			}
+		case 6:
+			if (playerAPos == 3)
+			{
+				Player::ExecuteAttack('B');
+			}
+			if (playerAPos == 7)
+			{
+				Player::ExecuteAttack('B');
+			}
+			else
+			{
+				cout << "Player B is not in an adjacent tile.";
+			}
+		case 7:
+			if (playerAPos == 4)
+			{
+				Player::ExecuteAttack('B');
+			}
+			if (playerAPos == 6)
+			{
+				Player::ExecuteAttack('B');
+			}
+			if (playerAPos == 8)
+			{
+				Player::ExecuteAttack('B');
+			}
+			else
+			{
+				cout << "Player B is not in an adjacent tile.";
+			}
+		case 8:
+			if (playerAPos == 5)
+			{
+				Player::ExecuteAttack('B');
+			}
+			if (playerAPos == 7)
+			{
+				Player::ExecuteAttack('B');
+			}
+			else
+			{
+				cout << "Player B is not in an adjacent tile.";
+			}
+		}
 	}
 }
 
@@ -102,7 +400,7 @@ void Player::Move()
 
 	cout << "Where would you like to go?: ";
 	cin >> moveDir;
-	if (moveDir == 'n' || moveDir == 'e' || moveDir == 's' || moveDir == 'w'/* || moveDir != 'c'*/)
+	if (moveDir == 'n' || moveDir == 'e' || moveDir == 's' || moveDir == 'w')
 	{
 		// move position based on a passed in direction value
 		switch (playerPos)

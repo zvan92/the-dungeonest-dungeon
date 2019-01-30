@@ -55,6 +55,7 @@ public:
 	void Move();
 	void EndTurn();
 	void ExecuteMove(int pos, char player);
+	void ExecuteAttack(int pX);
 
 	~Player();
 private:
