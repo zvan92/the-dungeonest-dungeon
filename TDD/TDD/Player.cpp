@@ -13,9 +13,27 @@ Player::~Player()
 
 void Player::ExecuteAttack(int pX)
 {
-	int currentPlayer = pX;
+	int playerHP;
 
+	if (pX == 'A')
+	{
+		//int playerHP = BoardManager::getInstance()->players[1].getHealth();
+		playerHP -= 40;
+		//players[1].setHealth(playerHP);
+		cout << "Player B took 40 points of damage!" << endl;
+		system("PAUSE");
+		EndTurn();
+	}
 
+	if (pX == 'B')
+	{
+		//int playerHP = BoardManager::getInstance()->players[0].getHealth();
+		playerHP -= 40;
+		//players[0].setHealth(playerHP);
+		cout << "Player A took 40 points of damage!" << endl;
+		system("PAUSE");
+		EndTurn();
+	}
 }
 
 void Player::Attack()
@@ -197,7 +215,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player B is not in an adjacent tile.";
+				cout << "Player A is not in an adjacent tile.";
 			}
 		case 1:
 			if (playerAPos == 0)
@@ -214,7 +232,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player B is not in an adjacent tile.";
+				cout << "Player A is not in an adjacent tile.";
 			}
 		case 2:
 			if (playerAPos == 1)
@@ -227,7 +245,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player B is not in an adjacent tile.";
+				cout << "Player A is not in an adjacent tile.";
 			}
 		case 3:
 			if (playerAPos == 0)
@@ -244,7 +262,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player B is not in an adjacent tile.";
+				cout << "Player A is not in an adjacent tile.";
 			}
 		case 4:
 			if (playerAPos == 1)
@@ -265,7 +283,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player B is not in an adjacent tile.";
+				cout << "Player A is not in an adjacent tile.";
 			}
 		case 5:
 			if (playerAPos == 4)
@@ -282,7 +300,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player B is not in an adjacent tile.";
+				cout << "Player A is not in an adjacent tile.";
 			}
 		case 6:
 			if (playerAPos == 3)
@@ -295,7 +313,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player B is not in an adjacent tile.";
+				cout << "Player A is not in an adjacent tile.";
 			}
 		case 7:
 			if (playerAPos == 4)
@@ -312,7 +330,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player B is not in an adjacent tile.";
+				cout << "Player A is not in an adjacent tile.";
 			}
 		case 8:
 			if (playerAPos == 5)
@@ -325,7 +343,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player B is not in an adjacent tile.";
+				cout << "Player A is not in an adjacent tile.";
 			}
 		}
 	}
