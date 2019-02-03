@@ -17,9 +17,9 @@ void Player::ExecuteAttack(int pX)
 
 	if (pX == 'A')
 	{
-		//int playerHP = BoardManager::getInstance()->players[1].getHealth();
+		int playerHP = BoardManager::getInstance()->players[1].getHealth();
 		playerHP -= 40;
-		//players[1].setHealth(playerHP);
+		BoardManager::getInstance()->players[1].setHealth(playerHP);
 		cout << "Player B took 40 points of damage!" << endl;
 		system("PAUSE");
 		EndTurn();
@@ -27,9 +27,9 @@ void Player::ExecuteAttack(int pX)
 
 	if (pX == 'B')
 	{
-		//int playerHP = BoardManager::getInstance()->players[0].getHealth();
+		int playerHP = BoardManager::getInstance()->players[0].getHealth();
 		playerHP -= 40;
-		//players[0].setHealth(playerHP);
+		BoardManager::getInstance()->players[0].setHealth(playerHP);
 		cout << "Player A took 40 points of damage!" << endl;
 		system("PAUSE");
 		EndTurn();
@@ -57,142 +57,203 @@ void Player::Attack()
 			if (playerBPos == 1)
 			{
 				Player::ExecuteAttack('A');
+				break;
 			}
 			if (playerBPos == 3)
 			{
 				Player::ExecuteAttack('A');
+				break;
 			}
 			else
 			{
 				cout << "Player B is not in an adjacent tile.";
+				system("pause");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
+				break;
 			}
 		case 1:
 			if (playerBPos == 0)
 			{
 				Player::ExecuteAttack('A');
+				break;
 			}
 			if (playerBPos == 2)
 			{
 				Player::ExecuteAttack('A');
+				break;
 			}
 			if (playerBPos == 4)
 			{
 				Player::ExecuteAttack('A');
+				break;
 			}
 			else
 			{
 				cout << "Player B is not in an adjacent tile.";
+				system("pause");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
+				break;
 			}
 		case 2:
 			if (playerBPos == 1)
 			{
 				Player::ExecuteAttack('A');
+				break;
 			}
 			if (playerBPos == 5)
 			{
 				Player::ExecuteAttack('A');
+				break;
 			}
 			else
 			{
 				cout << "Player B is not in an adjacent tile.";
+				system("pause");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
+				break;
 			}
 		case 3:
 			if (playerBPos == 0)
 			{
 				Player::ExecuteAttack('A');
+				break;
 			}
 			if (playerBPos == 4)
 			{
 				Player::ExecuteAttack('A');
+				break;
 			}
 			if (playerBPos == 6)
 			{
 				Player::ExecuteAttack('A');
+				break;
 			}
 			else
 			{
 				cout << "Player B is not in an adjacent tile.";
+				system("pause");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
+
+				break;
 			}
 		case 4:
 			if (playerBPos == 1)
 			{
 				Player::ExecuteAttack('A');
+				break;
 			}
 			if (playerBPos == 3)
 			{
 				Player::ExecuteAttack('A');
+				break;
 			}
 			if (playerBPos == 5)
 			{
 				Player::ExecuteAttack('A');
+				break;
 			}
 			if (playerBPos == 7)
 			{
 				Player::ExecuteAttack('A');
+				break;
 			}
 			else
 			{
 				cout << "Player B is not in an adjacent tile.";
+				system("pause");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
+				break;
 			}
 		case 5:
 			if (playerBPos == 4)
 			{
 				Player::ExecuteAttack('A');
+				break;
 			}
 			if (playerBPos == 2)
 			{
 				Player::ExecuteAttack('A');
+				break;
 			}
 			if (playerBPos == 8)
 			{
 				Player::ExecuteAttack('A');
+				break;
 			}
 			else
 			{
 				cout << "Player B is not in an adjacent tile.";
+				system("pause");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
+				break;
 			}
 		case 6:
 			if (playerBPos == 3)
 			{
 				Player::ExecuteAttack('A');
+				break;
 			}
 			if (playerBPos == 7)
 			{
 				Player::ExecuteAttack('A');
+				break;
 			}
 			else
 			{
 				cout << "Player B is not in an adjacent tile.";
+				system("pause");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
+				break;
 			}
 		case 7:
 			if (playerBPos == 4)
 			{
 				Player::ExecuteAttack('A');
+				break;
 			}
 			if (playerBPos == 6)
 			{
 				Player::ExecuteAttack('A');
+				break;
 			}
 			if (playerBPos == 8)
 			{
 				Player::ExecuteAttack('A');
+				break;
 			}
 			else
 			{
 				cout << "Player B is not in an adjacent tile.";
+				system("pause");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
+				break;
 			}
 		case 8:
 			if (playerBPos == 5)
 			{
 				Player::ExecuteAttack('A');
+				break;
 			}
 			if (playerBPos == 7)
 			{
 				Player::ExecuteAttack('A');
+				break;
 			}
 			else
 			{
 				cout << "Player B is not in an adjacent tile.";
+				system("pause");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
+				break;
 			}
 		}
 	}
@@ -208,142 +269,202 @@ void Player::Attack()
 			if (playerAPos == 1)
 			{
 				Player::ExecuteAttack('B');
+				break;
 			}
 			if (playerAPos == 3)
 			{
 				Player::ExecuteAttack('B');
+				break;
 			}
 			else
 			{
 				cout << "Player A is not in an adjacent tile.";
+				system("pause");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
+				break;
 			}
 		case 1:
 			if (playerAPos == 0)
 			{
 				Player::ExecuteAttack('B');
+				break;
 			}
 			if (playerAPos == 2)
 			{
 				Player::ExecuteAttack('B');
+				break;
 			}
 			if (playerAPos == 4)
 			{
 				Player::ExecuteAttack('B');
+				break;
 			}
 			else
 			{
 				cout << "Player A is not in an adjacent tile.";
+				system("pause");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
+				break;
 			}
 		case 2:
 			if (playerAPos == 1)
 			{
 				Player::ExecuteAttack('B');
+				break;
 			}
 			if (playerAPos == 5)
 			{
 				Player::ExecuteAttack('B');
+				break;
 			}
 			else
 			{
 				cout << "Player A is not in an adjacent tile.";
+				system("pause");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
+				break;
 			}
 		case 3:
 			if (playerAPos == 0)
 			{
 				Player::ExecuteAttack('B');
+				break;
 			}
 			if (playerAPos == 4)
 			{
 				Player::ExecuteAttack('B');
+				break;
 			}
 			if (playerAPos == 6)
 			{
 				Player::ExecuteAttack('B');
+				break;
 			}
 			else
 			{
 				cout << "Player A is not in an adjacent tile.";
+				system("pause");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
+				break;
 			}
 		case 4:
 			if (playerAPos == 1)
 			{
 				Player::ExecuteAttack('B');
+				break;
 			}
 			if (playerAPos == 3)
 			{
 				Player::ExecuteAttack('B');
+				break;
 			}
 			if (playerAPos == 5)
 			{
 				Player::ExecuteAttack('B');
+				break;
 			}
 			if (playerAPos == 7)
 			{
 				Player::ExecuteAttack('B');
+				break;
 			}
 			else
 			{
 				cout << "Player A is not in an adjacent tile.";
+				system("pause");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
+				break;
 			}
 		case 5:
 			if (playerAPos == 4)
 			{
 				Player::ExecuteAttack('B');
+				break;
 			}
 			if (playerAPos == 2)
 			{
 				Player::ExecuteAttack('B');
+				break;
 			}
 			if (playerAPos == 8)
 			{
 				Player::ExecuteAttack('B');
+				break;
 			}
 			else
 			{
 				cout << "Player A is not in an adjacent tile.";
+				system("pause");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
+				break;
 			}
 		case 6:
 			if (playerAPos == 3)
 			{
 				Player::ExecuteAttack('B');
+				break;
 			}
 			if (playerAPos == 7)
 			{
 				Player::ExecuteAttack('B');
+				break;
 			}
 			else
 			{
 				cout << "Player A is not in an adjacent tile.";
+				system("pause");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
+				break;
 			}
 		case 7:
 			if (playerAPos == 4)
 			{
 				Player::ExecuteAttack('B');
+				break;
 			}
 			if (playerAPos == 6)
 			{
 				Player::ExecuteAttack('B');
+				break;
 			}
 			if (playerAPos == 8)
 			{
 				Player::ExecuteAttack('B');
+				break;
 			}
 			else
 			{
 				cout << "Player A is not in an adjacent tile.";
+				system("pause");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
+				break;
 			}
 		case 8:
 			if (playerAPos == 5)
 			{
 				Player::ExecuteAttack('B');
+				break;
 			}
 			if (playerAPos == 7)
 			{
 				Player::ExecuteAttack('B');
+				break;
 			}
 			else
 			{
 				cout << "Player A is not in an adjacent tile.";
+				system("pause");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
+				break;
 			}
 		}
 	}
