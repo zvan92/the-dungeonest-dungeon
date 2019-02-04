@@ -560,6 +560,9 @@ void Player::Move()
 			else
 			{
 				cout << "\n\nInvalid Direction.\n\n";
+				system("PAUSE");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
 				break;
 			}
 		case 1:
@@ -582,7 +585,13 @@ void Player::Move()
 				break;
 			}
 			else
+			{
 				cout << "\n\nInvalid Direction.\n\n";
+				system("PAUSE");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
+				break;
+			}
 		case 2:
 			if (moveDir == 'w')
 			{
@@ -597,7 +606,13 @@ void Player::Move()
 				break;
 			}
 			else
+			{
 				cout << "\n\nInvalid Direction.\n\n";
+				system("PAUSE");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
+				break;
+			}
 		case 3:
 			if (moveDir == 'n')
 			{
@@ -618,7 +633,13 @@ void Player::Move()
 				break;
 			}
 			else
+			{
 				cout << "\n\nInvalid Direction.\n\n";
+				system("PAUSE");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
+				break;
+			}
 		case 4:
 			if (moveDir == 'n')
 			{
@@ -645,7 +666,13 @@ void Player::Move()
 				break;
 			}
 			else
+			{
 				cout << "\n\nInvalid Direction.\n\n";
+				system("PAUSE");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
+				break;
+			}
 		case 5:
 			if (moveDir == 'n')
 			{
@@ -666,7 +693,13 @@ void Player::Move()
 				break;
 			}
 			else
+			{
 				cout << "\n\nInvalid Direction.\n\n";
+				system("PAUSE");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
+				break;
+			}
 		case 6:
 			if (moveDir == 'n')
 			{
@@ -681,7 +714,13 @@ void Player::Move()
 				break;
 			}
 			else
+			{
 				cout << "\n\nInvalid Direction.\n\n";
+				system("PAUSE");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
+				break;
+			}
 		case 7:
 			if (moveDir == 'n')
 			{
@@ -702,7 +741,13 @@ void Player::Move()
 				break;
 			}
 			else
+			{
 				cout << "\n\nInvalid Direction.\n\n";
+				system("PAUSE");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
+				break;
+			}
 		case 8:
 			if (moveDir == 'n')
 			{
@@ -717,11 +762,22 @@ void Player::Move()
 				break;
 			}
 			else
+			{
 				cout << "\n\nInvalid Direction.\n\n";
+				system("PAUSE");
+				system("cls");
+				BoardManager::getInstance()->DisplayBoard();
+				break;
+			}
 		}
 	}
 	else
+	{
 		cout << "\n\nInvalid Direction.\n\n";
+		system("PAUSE");
+		system("cls");
+		BoardManager::getInstance()->DisplayBoard();
+	}
 }
 
 

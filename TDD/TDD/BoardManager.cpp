@@ -88,11 +88,15 @@ char BoardManager::PlayerAction()
 	}
 	else if (playerAction == 'e')
 	{
+		players[pTurn].setCanMove(true);
 		players[pTurn].EndTurn();
 	}
 	else if (playerAction != 'a' || playerAction != 'm' || playerAction != 'e')
 	{
 		cout << "\nInvalid input. Please enter 'a' for attack, 'm' for move or 'e' for end turn.\n\n";
+		system("PAUSE");
+		system("cls");
+		BoardManager::getInstance()->DisplayBoard();
 		return NULL;
 	}
 	
