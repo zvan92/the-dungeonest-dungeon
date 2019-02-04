@@ -86,6 +86,8 @@ public:
 
 	int GetPlayerPositions(char player);
 
+	void GameOver();
+
 private:
 	BoardManager();
 

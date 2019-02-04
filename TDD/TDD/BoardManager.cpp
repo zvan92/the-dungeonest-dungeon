@@ -120,3 +120,28 @@ int BoardManager::GetPlayerPositions(char player) //pass in 'A' or 'B' depending
 	
 	return temp;
 }
+
+void BoardManager::GameOver()
+{
+	if (players[0].getHealth() > 0)
+	{
+		cout << players[0].getName() << " wins!\n\n";
+	}
+	else if (players[1].getHealth() > 0)
+	{
+		cout << players[1].getName() << " wins!\n\n";
+	}
+
+	char choice;
+	cout << "Play Again? (Y/N): ";
+	cin >> choice;
+
+	if (choice == 'y')
+	{
+		// restart game
+	}
+	else if (choice == 'n')
+	{
+		// quit game
+	}
+}
