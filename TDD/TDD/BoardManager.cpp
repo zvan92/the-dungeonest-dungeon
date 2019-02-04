@@ -163,6 +163,7 @@ void BoardManager::GameOver()
 
 	if (choice == 'y')
 	{
+		system("cls");
 		Init();
 	}
 	if (choice == 'n')
