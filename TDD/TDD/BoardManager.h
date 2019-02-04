@@ -73,6 +73,15 @@ public:
 		playerAction = value;
 	}
 
+	bool getGameIsRunning()
+	{
+		return gameIsRunning;
+	}
+	void setGameIsRunning(bool value)
+	{
+		gameIsRunning = value;
+	}
+
 // FUNCTIONS ============================================ //
 	void StartPlayerPositions();
 
@@ -80,13 +89,15 @@ public:
 
 	void PlayerTurn();
 
-	char PlayerAction();
+	int PlayerAction();
 
 	bool checkCollision();
 
 	int GetPlayerPositions(char player);
 
 	void GameOver();
+
+	bool gameIsRunning;
 
 private:
 	BoardManager();

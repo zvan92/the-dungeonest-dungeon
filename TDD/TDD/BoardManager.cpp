@@ -32,6 +32,20 @@ bool BoardManager::checkCollision()
 
 void BoardManager::DisplayBoard()
 {
+	//if (gameIsRunning)
+	//{
+	////	char x;
+	////	do
+	////	{
+	////		x = PlayerAction();
+	////	} while (x == NULL);
+	//}
+
+	//if (!gameIsRunning)
+	//{
+	//	return 1;
+	//}
+
 	for (int i = 0; i < 9; i++)
 	{
 		if (playerAPos == i)
@@ -45,7 +59,7 @@ void BoardManager::DisplayBoard()
 		if (playerAPos != i && playerBPos != i)
 		{
 			playerPos[i] = 'x';
-		}			
+		}
 	}
 	// Prints mapping out to screen
 	cout << "You are in a dungeon. It's dark. What else is there\n to say? \n \n";
@@ -61,10 +75,6 @@ void BoardManager::DisplayBoard()
 	cout << "\tA: " << players[0].getName() << "\t\t\tB: " << players[1].getName() << endl;
 	cout << "\tHP: " << players[0].getHealth() << "\t\t\tHP: " << players[1].getHealth() << endl;
 	cout << endl;
-	do
-	{
-		PlayerAction();
-	} while (PlayerAction() == NULL);
 }
 
 void BoardManager::PlayerTurn()
@@ -72,35 +82,48 @@ void BoardManager::PlayerTurn()
 	pTurn = !pTurn;
 }
 
-char BoardManager::PlayerAction()
+int BoardManager::PlayerAction()
 {
-	cout << "It's " << players[pTurn].getName() << "'s turn.\n\n";
-	cout << "What would you like to do?\n\n";
-	cout << "(A)ttack \n(M)ove \n(E)nd Turn \n\nYour choice: ";
-	cin >> playerAction;
-	if (playerAction == 'a')
+	if (gameIsRunning)
 	{
-		players[pTurn].Attack();
+		cout << "It's " << players[pTurn].getName() << "'s turn.\n\n";
+		cout << "What would you like to do?\n\n";
+		cout << "(A)ttack \n(M)ove \n(E)nd Turn \n\nYour choice: ";
+		cin >> playerAction;
+		if (playerAction == 'a')
+		{
+			players[pTurn].Attack();
+		}
+		else if (playerAction == 'm')
+		{
+			players[pTurn].Move();
+		}
+		else if (playerAction == 'e')
+		{
+			players[pTurn].setCanMove(true);
+			players[pTurn].EndTurn();
+		}
+		else if (playerAction != 'a' || playerAction != 'm' || playerAction != 'e')
+		{
+			cout << "\nInvalid input. Please enter 'a' for attack, 'm' for move or 'e' for end turn.\n\n";
+			system("PAUSE");
+			system("cls");
+			BoardManager::getInstance()->DisplayBoard();
+		}
+
+		if (gameIsRunning)
+		{
+			return 0;
+		}
+		if (!gameIsRunning)
+		{
+			return 1;
+		}
 	}
-	else if (playerAction == 'm')
-	{
-		players[pTurn].Move();
-	}
-	else if (playerAction == 'e')
-	{
-		players[pTurn].setCanMove(true);
-		players[pTurn].EndTurn();
-	}
-	else if (playerAction != 'a' || playerAction != 'm' || playerAction != 'e')
-	{
-		cout << "\nInvalid input. Please enter 'a' for attack, 'm' for move or 'e' for end turn.\n\n";
-		system("PAUSE");
-		system("cls");
-		BoardManager::getInstance()->DisplayBoard();
-		return NULL;
-	}
-	
-	return playerAction;
+	//if (!gameIsRunning)
+	//{
+	//	
+	//}
 }
 
 int BoardManager::GetPlayerPositions(char player) //pass in 'A' or 'B' depending on which player you're checking
@@ -140,10 +163,10 @@ void BoardManager::GameOver()
 
 	if (choice == 'y')
 	{
-		// restart game
+		Init();
 	}
-	else if (choice == 'n')
+	if (choice == 'n')
 	{
-		// quit game
+		setGameIsRunning(false);
 	}
 }

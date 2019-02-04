@@ -9,7 +9,7 @@ Init::Init()
 	srand(time(0));
 	SetupPlayers();
 	BoardManager::getInstance()->StartPlayerPositions();
-	BoardManager::getInstance()->DisplayBoard();
+	//BoardManager::getInstance()->DisplayBoard();
 }
 
 
