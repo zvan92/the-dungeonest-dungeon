@@ -1,7 +1,6 @@
 #include "pch.h"
 #include "Player.h"
 #include "BoardManager.h"
-#include <time.h>
 
 Player::Player()
 {
@@ -14,7 +13,6 @@ Player::~Player()
 
 void Player::ExecuteAttack(int pX)
 {
-	srand(time(0));
 	int playerHP;
 	int pDam = (rand() % 41);
 

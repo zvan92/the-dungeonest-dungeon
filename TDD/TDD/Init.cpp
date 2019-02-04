@@ -2,9 +2,11 @@
 #include <iostream>
 #include "Init.h"
 #include "BoardManager.h"
+#include <time.h>
 
 Init::Init()
 {
+	srand(time(0));
 	SetupPlayers();
 	BoardManager::getInstance()->StartPlayerPositions();
 	BoardManager::getInstance()->DisplayBoard();
