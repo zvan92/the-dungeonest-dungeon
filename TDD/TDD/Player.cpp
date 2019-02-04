@@ -1,7 +1,6 @@
 #include "pch.h"
 #include "Player.h"
 #include "BoardManager.h"
-#include <time.h>
 
 Player::Player()
 {
