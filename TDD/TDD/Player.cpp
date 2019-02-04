@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "Player.h"
 #include "BoardManager.h"
+#include <time.h>
 
 Player::Player()
 {
@@ -13,14 +14,16 @@ Player::~Player()
 
 void Player::ExecuteAttack(int pX)
 {
+	srand(time(0));
 	int playerHP;
+	int pDam = (rand() % 41);
 
 	if (pX == 'A')
 	{
 		int playerHP = BoardManager::getInstance()->players[1].getHealth();
-		playerHP -= 40;
+		playerHP -= pDam;
 		BoardManager::getInstance()->players[1].setHealth(playerHP);
-		cout << "Player B took 40 points of damage!" << endl;
+		cout << "Player B took " << pDam << " points of damage!" << endl;
 		system("PAUSE");
 		EndTurn();
 	}
@@ -28,9 +31,9 @@ void Player::ExecuteAttack(int pX)
 	if (pX == 'B')
 	{
 		int playerHP = BoardManager::getInstance()->players[0].getHealth();
-		playerHP -= 40;
+		playerHP -= pDam;
 		BoardManager::getInstance()->players[0].setHealth(playerHP);
-		cout << "Player A took 40 points of damage!" << endl;
+		cout << "Player A took " << pDam << " points of damage!" << endl;
 		system("PAUSE");
 		EndTurn();
 	}
