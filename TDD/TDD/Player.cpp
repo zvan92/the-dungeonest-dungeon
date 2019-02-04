@@ -26,12 +26,10 @@ void Player::ExecuteAttack(int pX)
 		if (BoardManager::getInstance()->players[1].getHealth() <= 0)
 		{
 			BoardManager::getInstance()->GameOver();
-			return;
 		}
 		else
 		{
 			EndTurn();
-			return;
 		}
 	}
 
@@ -45,12 +43,10 @@ void Player::ExecuteAttack(int pX)
 		if (BoardManager::getInstance()->players[0].getHealth() <= 0)
 		{
 			BoardManager::getInstance()->GameOver();
-			return;
 		}
 		else
 		{
 			EndTurn();
-			return;
 		}
 	}
 }
@@ -802,14 +798,9 @@ void Player::Move()
 
 void Player::EndTurn()
 {
-	// end turn
 	system("CLS");
 	if (getCanMove())
 	{
 		BoardManager::getInstance()->PlayerTurn();
 	}
-	//if (BoardManager::getInstance()->DisplayBoard() == 1)
-	//{
-	//	return;
-	//}
 }

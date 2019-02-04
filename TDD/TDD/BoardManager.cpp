@@ -5,7 +5,7 @@
 
 using namespace std;
 
-BoardManager *BoardManager::instance = 0; //was in .h before
+BoardManager *BoardManager::instance = 0;
 
 BoardManager::BoardManager()
 {
@@ -32,20 +32,6 @@ bool BoardManager::checkCollision()
 
 void BoardManager::DisplayBoard()
 {
-	//if (gameIsRunning)
-	//{
-	////	char x;
-	////	do
-	////	{
-	////		x = PlayerAction();
-	////	} while (x == NULL);
-	//}
-
-	//if (!gameIsRunning)
-	//{
-	//	return 1;
-	//}
-
 	for (int i = 0; i < 9; i++)
 	{
 		if (playerAPos == i)
@@ -120,23 +106,19 @@ int BoardManager::PlayerAction()
 			return 1;
 		}
 	}
-	//if (!gameIsRunning)
-	//{
-	//	
-	//}
 }
 
-int BoardManager::GetPlayerPositions(char player) //pass in 'A' or 'B' depending on which player you're checking
+int BoardManager::GetPlayerPositions(char player)
 {
 	int temp = -1;
 
 	for (int i = 0; i < 9; i++)
 	{
-		if (playerPos[i] != 'x') //if a location variable has an 'A' or 'B' value
+		if (playerPos[i] != 'x')
 		{
 			if (playerPos[i] == player)
 			{
-				temp = i; //stores a value of 1-9 to show position
+				temp = i;
 			}
 		}
 	}
@@ -163,6 +145,7 @@ void BoardManager::GameOver()
 
 	if (choice == 'y')
 	{
+		system("cls");
 		Init();
 	}
 	if (choice == 'n')

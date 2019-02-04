@@ -103,7 +103,7 @@ private:
 	BoardManager();
 
 	bool pTurn = 0;
-	int playerAPos; //when player calls 'move', call this to get their position
+	int playerAPos;
 	int playerBPos;
 	char playerPos[9] = { 'x','x','x','x','x','x','x','x','x' };
 	char moveDir;
