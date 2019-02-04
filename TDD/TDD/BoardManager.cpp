@@ -123,6 +123,8 @@ int BoardManager::GetPlayerPositions(char player) //pass in 'A' or 'B' depending
 
 void BoardManager::GameOver()
 {
+	system("cls");
+
 	if (players[0].getHealth() > 0)
 	{
 		cout << players[0].getName() << " wins!\n\n";

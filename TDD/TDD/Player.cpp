@@ -14,7 +14,6 @@ Player::~Player()
 
 void Player::ExecuteAttack(int pX)
 {
-	srand(time(0));
 	int playerHP;
 	int pDam = (rand() % 41);
 
@@ -25,7 +24,14 @@ void Player::ExecuteAttack(int pX)
 		BoardManager::getInstance()->players[1].setHealth(playerHP);
 		cout << "Player B took " << pDam << " points of damage!" << endl;
 		system("PAUSE");
-		EndTurn();
+		if (BoardManager::getInstance()->players[1].getHealth() <= 0)
+		{
+			BoardManager::getInstance()->GameOver();
+		}
+		else
+		{
+			EndTurn();
+		}
 	}
 
 	if (pX == 'B')
@@ -35,7 +41,14 @@ void Player::ExecuteAttack(int pX)
 		BoardManager::getInstance()->players[0].setHealth(playerHP);
 		cout << "Player A took " << pDam << " points of damage!" << endl;
 		system("PAUSE");
-		EndTurn();
+		if (BoardManager::getInstance()->players[0].getHealth() <= 0)
+		{
+			BoardManager::getInstance()->GameOver();
+		}
+		else
+		{
+			EndTurn();
+		}
 	}
 }
 
