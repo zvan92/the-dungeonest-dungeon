@@ -81,7 +81,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player B is not in an adjacent tile.";
+				cout << "Player B is not in an adjacent tile.\n";
 				system("pause");
 				system("cls");
 				BoardManager::getInstance()->DisplayBoard();
@@ -105,7 +105,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player B is not in an adjacent tile.";
+				cout << "Player B is not in an adjacent tile.\n";
 				system("pause");
 				system("cls");
 				BoardManager::getInstance()->DisplayBoard();
@@ -124,7 +124,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player B is not in an adjacent tile.";
+				cout << "Player B is not in an adjacent tile.\n";
 				system("pause");
 				system("cls");
 				BoardManager::getInstance()->DisplayBoard();
@@ -148,7 +148,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player B is not in an adjacent tile.";
+				cout << "Player B is not in an adjacent tile.\n";
 				system("pause");
 				system("cls");
 				BoardManager::getInstance()->DisplayBoard();
@@ -178,7 +178,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player B is not in an adjacent tile.";
+				cout << "Player B is not in an adjacent tile.\n";
 				system("pause");
 				system("cls");
 				BoardManager::getInstance()->DisplayBoard();
@@ -202,7 +202,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player B is not in an adjacent tile.";
+				cout << "Player B is not in an adjacent tile.\n";
 				system("pause");
 				system("cls");
 				BoardManager::getInstance()->DisplayBoard();
@@ -221,7 +221,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player B is not in an adjacent tile.";
+				cout << "Player B is not in an adjacent tile.\n";
 				system("pause");
 				system("cls");
 				BoardManager::getInstance()->DisplayBoard();
@@ -245,7 +245,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player B is not in an adjacent tile.";
+				cout << "Player B is not in an adjacent tile.\n";
 				system("pause");
 				system("cls");
 				BoardManager::getInstance()->DisplayBoard();
@@ -264,7 +264,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player B is not in an adjacent tile.";
+				cout << "Player B is not in an adjacent tile.\n";
 				system("pause");
 				system("cls");
 				BoardManager::getInstance()->DisplayBoard();
@@ -293,7 +293,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player A is not in an adjacent tile.";
+				cout << "Player A is not in an adjacent tile.\n";
 				system("pause");
 				system("cls");
 				BoardManager::getInstance()->DisplayBoard();
@@ -317,7 +317,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player A is not in an adjacent tile.";
+				cout << "Player A is not in an adjacent tile.\n";
 				system("pause");
 				system("cls");
 				BoardManager::getInstance()->DisplayBoard();
@@ -336,7 +336,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player A is not in an adjacent tile.";
+				cout << "Player A is not in an adjacent tile.\n";
 				system("pause");
 				system("cls");
 				BoardManager::getInstance()->DisplayBoard();
@@ -360,7 +360,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player A is not in an adjacent tile.";
+				cout << "Player A is not in an adjacent tile.\n";
 				system("pause");
 				system("cls");
 				BoardManager::getInstance()->DisplayBoard();
@@ -389,7 +389,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player A is not in an adjacent tile.";
+				cout << "Player A is not in an adjacent tile.\n";
 				system("pause");
 				system("cls");
 				BoardManager::getInstance()->DisplayBoard();
@@ -413,7 +413,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player A is not in an adjacent tile.";
+				cout << "Player A is not in an adjacent tile.\n";
 				system("pause");
 				system("cls");
 				BoardManager::getInstance()->DisplayBoard();
@@ -432,7 +432,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player A is not in an adjacent tile.";
+				cout << "Player A is not in an adjacent tile.\n";
 				system("pause");
 				system("cls");
 				BoardManager::getInstance()->DisplayBoard();
@@ -456,7 +456,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player A is not in an adjacent tile.";
+				cout << "Player A is not in an adjacent tile.\n";
 				system("pause");
 				system("cls");
 				BoardManager::getInstance()->DisplayBoard();
@@ -475,7 +475,7 @@ void Player::Attack()
 			}
 			else
 			{
-				cout << "Player A is not in an adjacent tile.";
+				cout << "Player A is not in an adjacent tile.\n";
 				system("pause");
 				system("cls");
 				BoardManager::getInstance()->DisplayBoard();
